@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Activities.ui.profile.ProfileFragment"
+    android:background="@drawable/ic_starter_background">
+
+    <TextView
+        android:id="@+id/introduceTextViewNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="用户名: JohnDoe"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/introduceImgAvatar"
+        app:layout_constraintTop_toTopOf="@+id/introduceImgAvatar" />
+
+    <TextView
+        android:id="@+id/introduceTextViewInfo"
+        android:layout_width="98dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="男 25"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/introduceImgAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/introduceTextViewNickName" />
+
+    <TextView
+        android:id="@+id/introduceTextViewIp"
+        android:layout_width="110dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:text="ip: 北京"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/introduceTextViewInfo"
+        app:layout_constraintTop_toBottomOf="@+id/introduceTextViewNickName" />
+
+    <Button
+        android:id="@+id/introduceButtonChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送消息"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <com.rainbowx.finalwork.Views.AvatarView
+        android:id="@+id/introduceImgAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

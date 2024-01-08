@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Activities.ui.profile.ProfileFragment"
+    android:background="@drawable/ic_starter_background">
+
+    <TextView
+        android:id="@+id/profileTextViewNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="用户名: JohnDoe"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/profileImgAvatar"
+        app:layout_constraintTop_toTopOf="@+id/profileImgAvatar" />
+
+    <TextView
+        android:id="@+id/profileTextViewInfo"
+        android:layout_width="98dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="男 25"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/profileImgAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextViewNickName" />
+
+    <TextView
+        android:id="@+id/profileTextViewIp"
+        android:layout_width="110dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:text="ip: 北京"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/profileTextViewInfo"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextViewNickName" />
+
+    <Button
+        android:id="@+id/profileButtonLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登录"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <com.rainbowx.finalwork.Views.AvatarView
+        android:id="@+id/profileImgAvatar"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="160dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/settingsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
