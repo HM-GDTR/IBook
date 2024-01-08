@@ -43,7 +43,7 @@ IBook 允许用户根据自己的需求进行个性化设置，包括：
 
 ## 技术支持
 
-如果您在使用 IBook 过程中遇到任何问题或有建议，欢迎在 GitHub 上提出 issue 或者通过私信联系我们。
+如果您在使用 IBook 过程中遇到任何问题或有建议，欢迎在 GitHub 上提出 [issue](https://github.com/HM-GDTR/IBook/issues) 或者通过私信联系我们。
 
 ## 贡献者
 
