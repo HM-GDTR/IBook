@@ -14,10 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.rainbowx.finalwork.Bean.ChatBean;
 import com.rainbowx.finalwork.R;
+import com.rainbowx.finalwork.Services.User;
 
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
+    User otherUser;
     Context mcontext;
     List<ChatBean> chatList;
     public ChatAdapter(Context context, List<ChatBean> chatList){
@@ -40,17 +42,21 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    public void setOtherUser(User otherUser) {
+        this.otherUser = otherUser;
+    }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final ChatBean chatBean = chatList.get(position);
         if(chatBean.order == 1){
-            holder.imgRight.setImageResource(R.drawable.ic_launcher_background);
+            holder.imgRight.setImageBitmap(User.curUser.getAvatar());
             holder.imgLeft.setVisibility(View.INVISIBLE);
             holder.textContent.setGravity(Gravity.END);
             //Glide.with(mcontext).load(memoBean.getimgpath()).into(holder.imgRight);
         }
         else{
-            holder.imgLeft.setImageResource(R.drawable.ic_launcher_background);
+            holder.imgLeft.setImageBitmap(otherUser.getAvatar());
             holder.imgRight.setVisibility(View.INVISIBLE);
             holder.textContent.setGravity(Gravity.START);
         }
